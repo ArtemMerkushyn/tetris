@@ -1,11 +1,6 @@
-var ctx;
-
-function loadGame() {
-    // created the game field
-    const canvas = document.createElement('canvas');
-    canvas.width = 1000;
-    canvas.height = 1000;
-    ctx = canvas.getContext('2d');
-    document.body.insertBefore(canvas, document.body.childNodes[0]);
+// create the field
+const field = document.querySelector('.grid');
+for(let i = 0; i < 200; i++) {
+  const cell = document.createElement('div');
+  field.appendChild(cell)
 }
-loadGame();

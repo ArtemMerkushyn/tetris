@@ -2,4 +2,34 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    height: 100svh;/* щоб нижня шторка не перекривала контент на мобільних пристроях */
+    background: linear-gradient(90deg, #395492, #0099c0, #3dd5a8);
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none; /* відключаю виділення */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(20, auto);
+    padding: 0.6vh;
+    gap: 0.3vh;
+    border-radius: 0.6vh;
+    background: rgba(1, 8, 89, 0.5);
+}
+
+.grid div {
+    --cell-size: min(4.5vh, 7.5vw);
+    height: var(--cell-size);
+    width: var(--cell-size);
+    border-radius: 0.3vh;
+    background: rgba(126, 150, 221, 0.2);
 }
